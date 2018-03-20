@@ -1,0 +1,65 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title 404 ·
+        link(rel="icon", href="/images/logo.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/reset.css")
+        style.
+            html, body {
+                height: 100%;
+            }
+            a {
+                color: rgb(81, 143, 245);
+                text-decoration: none;
+                padding: 0 3px;
+            }
+            .container {
+                padding-top: 20px;
+                text-align: center;
+            }
+            .page-404 {
+                display: inline-block;
+                width: 500px;
+                height: 375px;
+                margin: 0 auto;
+            }
+            h1 {
+                font-size: 50px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+            .hint {
+                color: #555;
+                font-size: 14px;
+            }
+            .hint p {
+                line-height: 1.5em;
+                margin-bottom: 20px;
+            }
+            .hint ul {
+                display: inline-block;
+
+                text-align: left;
+                list-style-type: disc;
+            }
+            .hint li p {
+                margin-bottom: 5px;
+            }
+            .hint li:last-child .name::first-letter {
+                letter-spacing: 14px;
+            }
+    body
+        .container
+            img.page-404(src="/images/404.jpg")
+            h1 404
+            .hint
+                p
+                    span 哥，你访问的页面不存在，请
+                    a(href="/") 返回首页
+                    span 或联系网站管理员
+                ul
+                    li
+                        p.name 王浩杰（）
+                    li
+                        p.name 张涛（）

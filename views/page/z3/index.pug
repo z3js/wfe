@@ -1,0 +1,60 @@
+//- z3首页
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="author", content="wanghaojie01 <wanghaojie01@baidu.com>")
+        title z3 · HTML5快速开发框架
+        link(rel="icon", href="/images/logo.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/reset.css")
+        link(rel="stylesheet", href="/z3/css/index.css")
+    body
+        header.header
+            .wrap.clearfix
+                h1.logo.fl z3
+                .nav.fr
+                    a.nav-item(href="#") 指南
+                    a.nav-item(href="#") 贡献者
+                    a.nav-item(href="#") GITLAB
+
+        section.hero
+            .wrap.clearfix
+                .logo-wrap.fl
+                    include ./inc/logo
+
+                .fr.right
+                    h2
+                        span HTML5
+                        span 快速开发框架
+                    p
+                        a.button(href="/z3/guide/index.md") 起步
+                        a.button.white(href="http://gitlab.baidu.com/groups/z3") GITLAB
+
+        .highlights
+            .inner
+                .point
+                    h3 易用
+                    p 已经会了less,es6,vue,pug？即刻阅读指南开始构建应用！
+                .point
+                    h3 灵活
+                    p 简单精巧的核心，清晰统一的规范，足以胜任任何规模的应用。
+                .point
+                    h3 高效
+                    p 大量定制化专有组件选择，提供最省心的优化服务，让开发如鱼得水。
+
+        .quickstart
+            .wrap
+                h2 快速上手
+                video(width="850", src="/z3/videos/quickstart.mp4", controls="controls")
+
+        .sponsors
+            p 成为z3的赞助者
+
+            .qrcode
+                img(src="/z3/images/qrcode.png")
+
+        footer.footer
+            p.copyright
+                | &copy; 2016 - 2018 WFE

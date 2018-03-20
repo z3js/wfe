@@ -1,0 +1,137 @@
+.toast {
+  position: fixed;
+  z-index: 102;
+  top: 50%;
+  left: 50%;
+  max-width: 85%;
+  padding: 0.4375rem 0.75rem;
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  border-radius: 1px;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.toast.show {
+  opacity: 1;
+}
+.dialog {
+  position: fixed;
+  z-index: 102;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  min-width: 17.5rem;
+  max-width: 25rem;
+  opacity: 0.5;
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.dialog.show {
+  opacity: 1;
+}
+.dialog-header {
+  position: relative;
+  height: 1.5625rem;
+}
+.dialog-content {
+  min-height: 3.75rem;
+  padding: 0 1.5625rem 2.1875rem 1.5625rem;
+  text-align: center;
+}
+.dialog-content {
+  font-size: 16px;
+  color: #999;
+}
+.dialog-content h4 {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  color: #222;
+}
+.dialog-content .content {
+  display: inline-block;
+  line-height: 1.375em;
+}
+.dialog-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  position: relative;
+}
+.dialog-footer::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0.03125rem;
+  border-top: 1px solid #eeeeee;
+  color: #eeeeee;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.dialog-button {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.alert .dialog-button {
+  text-align: center;
+  color: #6492E3;
+}
+.confirm .dialog-button {
+  text-align: center;
+}
+.confirm .dialog-button:first-child {
+  color: #222;
+  border-radius: 0 0 0 1px;
+}
+.confirm .dialog-button:last-child {
+  color: #6492E3;
+  border-radius: 0 0 1px 0;
+}
+.confirm .dialog-button:not(:last-child) {
+  position: relative;
+}
+.confirm .dialog-button:not(:last-child)::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0.03125rem;
+  border-right: 1px solid #eeeeee;
+  color: #eeeeee;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+.dialog-overlay {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.dialog-button-hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix::after {
+  clear: both;
+}
+body {
+    font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.productions {
+    width: 660px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.production {
+    display: block;
+    width: 320px;
+    min-height: 270px;
+    margin-bottom: 20px;
+    padding: 40px 50px;
+    border-radius: 4px;
+    border: solid 1px #e6edf3;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all .1s ease-out;
+}
+.production:nth-of-type(2n) {
+    float: right;
+}
+.production:nth-of-type(2n+1) {
+    float: left;
+}
+.production h2 {
+    font-size: 20px;
+    color: #496174;
+    margin-bottom: 20px;
+}
+.production p {
+    font-size: 12px;
+    color: #889eb0;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.production .link {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.production.z3 .link {
+    color: #957fff;
+}
+.production.z3:hover {
+    border: 1px solid #957fff;
+    box-shadow: 0 0 0 1px #957fff;
+}
+.production.z3:hover .link {
+    color: #fff;
+    background-color: #957fff;
+}
+.production.agent .link {
+    color: #31b3a4;
+}
+.production.agent:hover {
+    border: 1px solid #31b3a4;
+    box-shadow: 0 0 0 1px #31b3a4;
+}
+.production.agent:hover .link {
+    color: #fff;
+    background-color: #31b3a4;
+}
+.production.gang .link {
+    color: #208aa7;
+}
+.production.gang:hover {
+    border: 1px solid #208aa7;
+    box-shadow: 0 0 0 1px #208aa7;
+}
+.production.gang:hover .link {
+    color: #fff;
+    background-color: #208aa7;
+}

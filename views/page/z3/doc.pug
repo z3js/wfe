@@ -1,0 +1,45 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="author", content="wanghaojie01 <wanghaojie01@baidu.com>")
+        title z3 · #{current.title}
+        link(rel="icon", href="/images/logo.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/reset.css")
+        link(rel="stylesheet", href="/z3/css/doc.css")
+    body
+        header.header
+            .wrap.clearfix
+                h1.logo.fl
+                    a(href="/z3") z3
+                .nav.fr
+                    a.nav-item(href="/z3/guide/index.md") 指南
+                    a.nav-item(href="#") 模板
+                    a.nav-item(href="/z3/component/index.md") 组件
+                    a.nav-item(href="#") GITLAB
+        .wrap
+            .main(class=`${current.parent}`)
+                aside.aside.sidebar
+                    ul
+                        each item, index in catalogue
+                            if index == current.index
+                                li
+                                    a.sidebar-link.current(href=`${item.link}`)= item.title
+                                    #sub-menu-container
+                            else
+                                li
+                                    a.sidebar-link(href=`${item.link}`)= item.title
+                .content#content
+                    | !{content}
+
+                if current.parent === 'component'
+                    .phone
+                        .phone-inner
+                            iframe#phone-iframe.phone-iframe(src="/z3/iframe/page/index.html")
+
+        script(src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js")
+        script(src="//cdn.bootcss.com/smooth-scroll/10.1.0/js/smooth-scroll.min.js")
+        script(src="//cdn.bootcss.com/highlight.js/9.8.0/highlight.min.js")
+        script(src="/z3/js/doc.js")
